@@ -1,0 +1,21 @@
+public class Deposit extends Account{
+    int term;
+    double rate;
+
+    public Deposit(int term, double rate, String accNo, double balance) {
+        super(accNo, balance);
+        this.term = term;
+        this.rate = rate;
+    }
+
+    @Override
+    public void AddInterest(){
+        balance += balance * rate/100 * term/12;
+    }
+    
+  
+    @Override
+    public String toString (){
+        return "FD account - " + super.toString() + ", term: "+ term + ", rate: " + rate; 
+    }
+}
