@@ -1,0 +1,23 @@
+public class AccountClient {
+    public static void main(String[]args){
+        Account [] acc = new Account[4];
+        acc [0] = new Savings("S002",3000);
+        acc [1] = new Savings("S003",4000);
+        acc [2] = new Deposit(3,4,"S004",5000);
+        acc [3] = new Deposit(5,7,"S005",6000);
+      
+        
+        for (Account account: acc){
+            System.out.println(account);
+            account.AddInterest();
+             System.out.println(account);
+        }
+        //Savings.rate = 1;
+        // s = new Savings("S001",2000);
+        
+        //Deposit fd = new Deposit(2, 2, "FD001", 3000);
+        
+        //System.out.println(s);
+        //System.out.println(fd);
+    }
+}
