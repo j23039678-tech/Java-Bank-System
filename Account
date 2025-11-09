@@ -1,0 +1,24 @@
+public abstract class Account {//parent class
+  
+    String accNo;
+    double balance;
+    static int count = 0;
+
+    public Account(String accNo) {
+        this.accNo = accNo;
+    }
+
+    public Account(String accNo, double balance) {
+        this.accNo = accNo;
+        this.balance = balance;
+    }
+    
+    
+    public abstract void AddInterest();
+    
+    
+    @Override
+    public String toString (){
+        return "A/c No.: " + accNo + ", balance: " + balance;
+    }
+}
