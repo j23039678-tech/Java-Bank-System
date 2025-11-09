@@ -1,0 +1,23 @@
+public class Savings extends Account{ //child class
+    static double rate; //only for Savings account
+
+    public Savings() {
+        super("S002",4000);
+    }
+    
+    
+    public Savings(String accNo, double balance) {
+        super(accNo, balance);
+    }
+
+    @Override
+    public void AddInterest(){
+        balance += balance * rate/100 * 6/12;
+    }
+    
+
+@Override
+public String toString(){
+    return "Savings account - " + super.toString();
+}
+}
